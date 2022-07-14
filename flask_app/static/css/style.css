@@ -1,0 +1,124 @@
+body{
+    height:100vh;
+    background: linear-gradient(to bottom ,#CBA587,#D6B395,#F9B73B);
+    /* background-color: #F9B73B; */
+    /* background-color: #CBA587; */
+    /* background-color: #E2C7AA; */
+    /* background-color: #fff; */
+    overflow: hidden;
+   /* position: relative; */
+}
+.img-section-sigin{
+    width:400px;
+    height: 500px;
+    transform: rotate(10deg);
+}
+/* #signin{
+    background-color: #F9B73B;
+} */
+svg{
+    width:35px;
+    height:35px;
+    fill: rgb(73, 71, 71);
+    /* fill:#CBA587; */
+}
+.login{
+    /* background-color: aqua; */
+    margin:0 auto;
+    width:80%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.login-form,.regeter-form{
+    /* background-color: rgb(255, 127, 234); */
+    width:500px;
+    height:300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    /* background-color: aquamarine; */
+}
+#email, #password,.input{
+    height:30px;
+    width:200px;
+    border-radius: 20px;
+    border: 1px solid gray;
+
+}
+#signin{
+    width:100px;
+    height:30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.email-section,.password-section{
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    gap:10px;
+
+}
+.register{
+    /* background-color: aqua; */
+    display: flex;
+   align-items: center;
+   justify-content:center;
+   gap:10px;
+}
+.register p,a{
+    font-size: 14px;
+    color: black;
+}
+/* ***********************registration form style***************************************** */
+.register_container{
+    background-color: antiquewhite;
+    width:50%;
+    height:70%;
+    margin:100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    box-shadow: 3px 3px 3px rgb(175, 169, 162);
+
+}
+
+.signup-form{
+    /* background-color: aquamarine; */
+    width:60%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* justify-content: center;
+    align-items: center; */
+    gap:10px;
+}
+.signup-form  div{
+    display: flex;
+    justify-content:space-between;
+    gap:5px;
+    /* background-color: red; */
+    
+    
+}
+.signup-btn{
+    background-color: #F9B73B;
+}
+.signup-btn:hover{
+    background-color: #f2b441
+}
+.input{
+    width:60%;
+}
+
+
+
+.hidden{
+    display: none;
+}

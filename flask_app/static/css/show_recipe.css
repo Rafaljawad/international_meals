@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.d-block {
+    height:500px;
+}
+
+.container-show{
+    width:95%;
+    margin:5px auto;
+}
+span{
+    font-weight: bold;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px;;
+}
+header .links{
+padding: 10px;
+    display: flex;
+    gap:30px;
+
+}

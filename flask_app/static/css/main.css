@@ -33,7 +33,8 @@ main{
 .hero_section img{
 
     width:60%;
-    height:660px;
+    height:500px;
+    box-shadow: 3px 3px 3px #fff;
 }
 
 .main_description{
@@ -50,14 +51,7 @@ main{
 }
 
 
-.navbar-nav{
-    /* background-color: aquamarine; */
-    width:50%;
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
-    gap:15px;
-}
+
 .signin-btn{
     width:150px;
 }
@@ -77,12 +71,22 @@ main{
 
 /* nav bar style */
 .collapse{
+    /* background-color: #6c584c; */
     margin-bottom: 0;
-
+    width: 100%;
     height:70px;
     display: flex;
-    justify-content: space-around;
-    gap:400px;
+    justify-content: space-between;
+    /* gap:200px; */
+}
+.navbar-nav{
+    /* background-color: aquamarine; */
+    padding-right: 20px;
+    width:70%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap:15px;
 }
 .title a{
     font-family: 'Rubik Moonrocks', cursive;

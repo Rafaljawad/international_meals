@@ -17,13 +17,13 @@
     <div class="head">
         <h1>All Meals</h1>
         <div class="right-head-side">
-            <p>{{session.first_name}} {{session.last_name}}</p>
+            {{session.first_name}} {{session.last_name}}
             <a href="/"><button type="button" class="btn btn-warning signin-btn">Home</button></a>
             <a href="/sign_out"><button type="button" class="btn btn-warning signin-btn">Log Out</button> </a>
         </div>
     </div>
-  
     <div class=" container-md recipe-img-head ">
+
         <img src="{{ url_for('static', filename='images/chad-montano-eeqbbemH9-c-unsplash.jpg') }}">
         <img src="{{ url_for('static', filename='images/coffe.JPG') }}">
         <img src="{{ url_for('static', filename='images/IMG_8792.JPG') }}">
@@ -37,6 +37,7 @@
     </div>
     <!-- <hr> -->
     <div class="container-sm recipe-content">
+        <hr>
     {% for meal in all_meals %}
         <div class="meal-title">
             {{meal.meal_name}}

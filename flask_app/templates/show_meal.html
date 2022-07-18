@@ -27,16 +27,17 @@
         <div class="img-show">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="{{ url_for('static', filename='images/brooke-lark-.jpg') }}" class="d-block w-100">
+                  <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='images/2.jpg') }}" class="d-block w-100">
+                  </div>
+                    <div class="carousel-item ">
+                        <img src="{{ url_for('static', filename='images/3.jpg') }}" class="d-block w-100">
                       </div>
                   <div class="carousel-item ">
                     <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                    <img src="{{ url_for('static', filename='images/brooke-lark.jpg') }}" class="d-block w-100">
+                    <img src="{{ url_for('static', filename='images/1.jpg') }}" class="d-block w-100">
                 </div>
-                  <div class="carousel-item">
-                    <img src="{{ url_for('static', filename='images/bern-fresen-.jpg') }}" class="d-block w-100">
-                  </div>
+                  
                   <!-- <div class="carousel-item">
                     <img src="{{ url_for('static', filename='images/breakfast2.jpg') }}" class="d-block w-100">
                   </div> -->
@@ -60,7 +61,7 @@
         <p><span>Dierection:</span>  {{ this_meal.direction }}</p>
         <p><span>calories_num:</span>  {{ this_meal.calories_num }}</p>
         {% if this_meal.user_id==session.user_id%}
-          <a href="/edit/meal/{{this_meal.id}}"><button type="button" class="btn btn-warning bttn">Edit Meal</button></a><span></span><a href="/delete/meal/{{this_meal.id}}" ><button type="button" class="btn btn-warning bttn">Delete Meal</button></a>
+          <a href="/edit/meal/{{this_meal.id}}"><button type="button" class="btn btn-warning bttn">Edit Meal</button></a><span class="span-btn"></span><a href="/delete/meal/{{this_meal.id}}" ><button type="button" class="btn btn-warning bttn">Delete Meal</button></a>
         {% endif %}
     </div>
 </main>

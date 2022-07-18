@@ -11,9 +11,12 @@
     width:95%;
     margin:5px auto;
 }
+.span-btn{
+    font-weight: bold;
+    margin-left: 40px;;
+}
 span{
     font-weight: bold;
-    margin-left: 20px;;
 }
 header{
     display: flex;

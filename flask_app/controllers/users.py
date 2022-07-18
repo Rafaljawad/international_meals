@@ -9,6 +9,7 @@ from flask_app.models import user,meal
 def show_page():
     return render_template("main_page.html")
 
+#register
 @app.route('/register',methods=['POST','GET'])
 def user_sign_up():
     if request.method=="GET":
@@ -18,7 +19,7 @@ def user_sign_up():
         if not user.User.create_new_user(request.form):
             return render_template('sign_up.html')
         else:# if create user function came true so will redirect to route that displays user on profile
-            return redirect('/')
+            return redirect('/sign_in')
 
 #login route
 @app.route('/sign_in',methods=['POST','GET'])

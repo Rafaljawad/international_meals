@@ -23,12 +23,15 @@
         </div>
         
     </header>
-   
+    <hr>
 <div class="container">
     <div class="img-container ">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='images/klecha.jpeg') }}" class="d-block w-100">
+                  </div>
+                <div class="carousel-item ">
                     <img src="{{ url_for('static', filename='images/salmon (2).JPG') }}" class="d-block w-100">
                   </div>
               <div class="carousel-item ">
@@ -36,10 +39,7 @@
                 <img src="{{ url_for('static', filename='images/qouzi.JPG') }}" class="d-block w-100">
             </div>
               <div class="carousel-item">
-                <img src="{{ url_for('static', filename='images/IMG_8792.JPG') }}" class="d-block w-100">
-              </div>
-              <div class="carousel-item">
-                <img src="{{ url_for('static', filename='images/breakfast2.jpg') }}" class="d-block w-100">
+                <img src="{{ url_for('static', filename='images/HVOY9301.JPG') }}" class="d-block w-100">
               </div>
 
             </div>
@@ -55,7 +55,7 @@
     </div>
     <div class="form-container">
     <h1>Add a New Meal:</h1>
-    <form action="/add/meal" method="post" class="add-form">
+    <form action="/add/meal" method="post" class="add-form"  enctype="multipart/form-data">
         <input type="hidden" name="user_id" value="{{session.user_id}}">
         <div>
             <label for="meal_name">meal_name :</label>
@@ -67,7 +67,20 @@
         </div>
         <div>
             <!-- <label for="recipe">recipe: </label> -->
-            <textarea name="recipe"  cols="60" rows="10" placeholder="enter your recipe here" class="txt-area"></textarea>
+            <textarea name="recipe"  cols="60" rows="5" placeholder="enter your recipe here" class="txt-area"></textarea>
+        </div>
+        <div>
+            <!-- <label for="recipe">recipe: </label> -->
+            <textarea name="direction"  cols="60" rows="5" placeholder="direction" class="txt-area"></textarea>
+        </div>
+
+        <div>
+            <label for="calories_num">Number of Calories:</label>
+            <input type="text" name="calories_num">
+        </div>
+        <div>
+            <label for="image">upload image :</label>
+            <input type="file" name="image" id="">
         </div>
         <button type="submit" class="btn btn-primary add-btn">Add</button>
                 <!-- this syntax BELOW for flash error message  -->

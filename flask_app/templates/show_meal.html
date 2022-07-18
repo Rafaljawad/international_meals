@@ -56,8 +56,12 @@
 
         <h1>{{this_meal.meal_name}}</h1>
         <p><span>Origin:</span> {{ this_meal.origin}}</p>
-           
         <p><span>Recipe:</span>  {{ this_meal.recipe }}</p>
+        <p><span>Dierection:</span>  {{ this_meal.direction }}</p>
+        <p><span>calories_num:</span>  {{ this_meal.calories_num }}</p>
+        {% if this_meal.user_id==session.user_id%}
+          <a href="/edit/meal/{{this_meal.id}}"><button type="button" class="btn btn-warning bttn">Edit Meal</button></a><span></span><a href="/delete/meal/{{this_meal.id}}" ><button type="button" class="btn btn-warning bttn">Delete Meal</button></a>
+        {% endif %}
     </div>
 </main>
 </body>

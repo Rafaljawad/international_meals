@@ -1,6 +1,6 @@
 body{
     height:100vh;
-    background: linear-gradient(to bottom ,#CBA587,#D6B395,#F9B73B);
+    /* background: linear-gradient(to bottom ,#CBA587,#D6B395,#F9B73B); */
     /* background-color: #F9B73B; */
     /* background-color: #CBA587; */
     /* background-color: #E2C7AA; */
@@ -9,9 +9,9 @@ body{
    /* position: relative; */
 }
 .img-section-sigin{
-    width:400px;
+    width:500px;
     height: 500px;
-    transform: rotate(10deg);
+    /* transform: rotate(10deg); */
 }
 /* #signin{
     background-color: #F9B73B;
@@ -25,11 +25,11 @@ svg{
 .login{
     /* background-color: aqua; */
     margin:0 auto;
-    width:80%;
+    width:85%;
     height:100vh;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .login-form,.regeter-form{
     /* background-color: rgb(255, 127, 234); */
@@ -75,22 +75,21 @@ svg{
 }
 /* ***********************registration form style***************************************** */
 .register_container{
-    background-color: antiquewhite;
-    width:50%;
-    height:70%;
+    /* background-color: antiquewhite; */
+    width:85%;
+    height:100vh;
     margin:100px auto;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap:20px;
-    box-shadow: 3px 3px 3px rgb(175, 169, 162);
+  
 
 }
 
 .signup-form{
     /* background-color: aquamarine; */
-    width:60%;
+    width:40%;
     height: 60%;
     display: flex;
     flex-direction: column;
@@ -115,6 +114,7 @@ svg{
 }
 .input{
     width:60%;
+    padding-left: 10px;
 }
 
 

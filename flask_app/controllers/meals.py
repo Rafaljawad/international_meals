@@ -3,6 +3,8 @@
 from flask_app import app
 from flask import render_template,redirect,request,session, flash
 from flask_app.models import user,meal
+import os
+from werkzeug.utils import secure_filename
 
 @app.route("/show_all_meals")
 def show_all_meals():
@@ -20,7 +22,27 @@ def add_meall_to_user():
         else:
             return render_template("add_meal.html")
     else:
-        if  meal.Meal.create_meal(request.form):
+        if('image' not in request.files or request.files['image'].filename==""):
+            flash("please ensert an image")
+            return redirect("/add/meal")
+        image=request.files['image']
+        filename=secure_filename(image.filename)
+        print(filename)
+        print(app.config["UPLOAD_FOLDER"])
+        # basedir = os.path.abspath(os.path.dirname(__file__))
+        image.save(os.path.join(app.config["UPLOAD_FOLDER"],filename))
+
+
+        data={
+            "meal_name" : request.form['meal_name'],
+            "origin" :request.form['origin'],
+            "recipe": request.form['recipe'],
+            "direction": request.form['direction'],
+            "calories_num": request.form['calories_num'],
+            "image" :os.path.join("/static/images",filename),
+            "user_id":request.form['user_id']
+        }
+        if  meal.Meal.create_meal(data):
             return redirect("/show_all_meals")
         else:
             return render_template("add_meal.html")
@@ -55,6 +77,8 @@ def edit_meal(id):
             'meal_name':request.form['meal_name'],
             'origin':request.form['origin'],
             'recipe':request.form['recipe'],
+            'direction': request.form['direction'],
+            'calories_num': request.form['calories_num']
         }
         if meal.Meal.update_meal_by_id(meal_data)==None:
             return redirect('/show_all_meals')
@@ -74,5 +98,7 @@ def destroy_meal(id):
     if 'user_id' not in session:
             return redirect("/")
     else:
+        filename=meal.Meal.get_meal_by_id(id).image.replace("/static/images\\","")
+        os.remove(os.path.join(app.config["UPLOAD_FOLDER"],filename))
         meal.Meal.delete_meal(id)
         return redirect('/show_all_meals')

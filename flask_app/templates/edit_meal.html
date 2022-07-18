@@ -16,11 +16,12 @@
             <h1>Share Your Meal With world!</h1>
         </div>
         <div class="links">
-            <p class="user-name">{{session.first_name}} {{session.last_name}}</p>
+            {{session.first_name}} {{session.last_name}}
             <a href="/"><button type="button" class="btn btn-warning bttn">Home</button></a>
             <a href="/sign_out"><button type="button" class="btn btn-warning bttn">Log Out</button></a>
         </div>
     </header>
+    <hr>
 <div class="container">
     <div class="img-container">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -30,13 +31,13 @@
                   </div>
               <div class="carousel-item ">
                 <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                <img src="{{ url_for('static', filename='images/qouzi.JPG') }}" class="d-block w-100">
+                <img src="{{ url_for('static', filename='images/tabsi.jpeg') }}" class="d-block w-100">
             </div>
               <div class="carousel-item">
-                <img src="{{ url_for('static', filename='images/IMG_8792.JPG') }}" class="d-block w-100">
+                <img src="{{ url_for('static', filename='images/halap kuba.jpeg') }}" class="d-block w-100">
               </div>
               <div class="carousel-item">
-                <img src="{{ url_for('static', filename='images/breakfast2.jpg') }}" class="d-block w-100">
+                <img src="{{ url_for('static', filename='images/saj.jpeg') }}" class="d-block w-100">
               </div>
 
             </div>
@@ -64,7 +65,15 @@
         </div>
         <div>
             <!-- <label for="recipe">Recipe: </label> -->
-            <textarea name="recipe"  cols="60" rows="10">{{this_meal.recipe}}</textarea>
+            <textarea name="recipe"  cols="60" rows="5">{{this_meal.recipe}}</textarea>
+        </div>
+        <div>
+            <!-- <label for="recipe">Recipe: </label> -->
+            <textarea name="direction"  cols="60" rows="5">{{this_meal.direction}}</textarea>
+        </div>
+        <div>
+            <label for="calories_num">Num of Calories :</label>
+            <input type="text" name="calories_num" value="{{this_meal.calories_num}}">
         </div>
         <button type="submit" class="btn btn-primary add-btn">Edit</button>
                 <!-- this syntax BELOW for flash error message  -->

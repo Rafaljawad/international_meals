@@ -8,6 +8,9 @@ body{
     overflow: hidden;
    /* position: relative; */
 }
+h3{
+    text-align: center;
+}
 .img-section-sigin{
     width:500px;
     height: 500px;
@@ -47,6 +50,7 @@ svg{
     width:200px;
     border-radius: 20px;
     border: 1px solid gray;
+    padding-left: 12px;;
 
 }
 #signin{
@@ -78,7 +82,7 @@ svg{
     /* background-color: antiquewhite; */
     width:85%;
     height:100vh;
-    margin:100px auto;
+    margin:20px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;

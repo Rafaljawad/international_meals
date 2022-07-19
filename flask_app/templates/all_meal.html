@@ -22,9 +22,11 @@
             <a href="/sign_out"><button type="button" class="btn btn-warning signin-btn">Log Out</button> </a>
         </div>
     </div>
-    <hr>
-    <div class=" container-md recipe-img-head ">
 
+    <div class=" container-md recipe-img-head ">
+        <img src="{{ url_for('static', filename='images/frab.jpg') }}">
+        <img src="{{ url_for('static', filename='images/salmon (2).JPG') }}">
+        <img src="{{ url_for('static', filename='images/klecha.jpeg') }}">
         <img src="{{ url_for('static', filename='images/breakfast2.jpg') }}">
         <img src="{{ url_for('static', filename='images/coffe.JPG') }}">
         <img src="{{ url_for('static', filename='images/tabsi.jpeg') }}">
@@ -36,10 +38,11 @@
         <img src="{{ url_for('static', filename='images/YBPR5233.JPG') }}">
         <hr>
     </div>
+    <hr>
    
     <div class="card-holder">
         {% for meal in all_meals %}
-    <div class="card" style="width: 17.4rem;">
+    <div class="card" style="width: 17.4rem;" onmouseover="makeShadow(this);" onmouseleave="removeShadow(this);">
         
         <img class="card-img-top" src="{{meal.image}}" alt="Card image cap">
         <div class="card-body">
@@ -70,13 +73,7 @@
     </div>
     {% endfor%}
     </div>
-   <!-- <div class="alert">
-    <p> Do You want to delete this meal?</p>
-    <div class="alert-btn">
-        <button>Yes</button>
-        <button>No</button>
-    </div>
-   </div> -->
+  
  <div class="add-meal container-lg">
     <a href="/add/meal"><button type="button" class="btn btn-warning signin-btn add-meal-btn">Add Meal</button></a>
 </div>
@@ -102,6 +99,6 @@
     </div>
     
     </div>
-    
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js')}}"></script>
 </body>
 </html>

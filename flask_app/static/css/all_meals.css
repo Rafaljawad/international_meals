@@ -3,10 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* body{ 
-    filter: blur(2px);
-    
-} */
+
 h1{
     color: #343a40;;
 }
@@ -23,8 +20,8 @@ h1{
 .recipe-img-head img{
     display: inline-block;
     border-radius: 50%;
-    height:100px;
-    width:100px;
+    height:70px;
+    width:70px;
 }
 svg{
    width:20px;
@@ -42,6 +39,7 @@ svg{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;;
 }
 .right-head-side{
     
@@ -66,21 +64,7 @@ i{
     margin-left: 20px;
 }
 
-.alert{
-    width: 20%;
-    /* background-color: beige; */
-    padding:40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-   
-}
-.alert button{
-    width:70px;
-}
-.hidden{
-    display: none;
-}
+
 .add-meal{
     width:100%;
     margin:10px auto;
@@ -128,4 +112,9 @@ ul.navbar-nav{
 footer{
     font-size: 14px;
     color: #343a40;
+}
+.shadow{
+        box-shadow: 5px 5px 8px rgb(32, 29, 29);
+        margin-bottom: 10px;
+
 }

@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    position: relative;
+}
 .d-block {
     height:500px;
 }
@@ -36,4 +39,30 @@ h1{
 }
 .btn{
 width:200px;
+}
+
+.alert{
+    width: 20%;
+    background-color: #f1f3f5;
+    border: 1px solid black;
+    padding:40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
+    position: absolute;
+    z-index: 1;
+    bottom: 10%;
+    left: 35%;
+   
+}
+.alert button{
+    width:70px;
+}
+.hidden{
+    display: none;
+}
+.overlay{ 
+    filter: blur(2px);
 }

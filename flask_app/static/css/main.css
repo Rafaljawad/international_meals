@@ -73,8 +73,9 @@ main{
 .collapse{
     /* background-color: #6c584c; */
     margin-bottom: 0;
+    padding-left: 20px;
     width: 100%;
-    height:70px;
+    height:35px;
     display: flex;
     justify-content: space-between;
     /* gap:200px; */
@@ -88,16 +89,22 @@ main{
     justify-content: flex-end;
     gap:15px;
 }
+.title{
+    display: flex;
+    font-size: 32px;
+    justify-content: flex-start;
+    margin-right: 0;
+}
 .title a{
     font-family: 'Rubik Moonrocks', cursive;
     color: rgb(53, 49, 49);
     font-size: 32px;
-    padding-left: 30px;
+    /* padding-left: 30px; */
 }
-/* .main_description p{
-    font-weight: 500;
-    line-height: 1.5;
-} */
+.title a:hover{
+    color:#343a40;
+}
+
 .description-title{
     font-weight: bold;
     font-size: 36px;
@@ -114,4 +121,36 @@ main{
 }
 .btn-main a{
     color: #fff;
+}
+
+
+
+/* add animation to title */
+.title a
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #495057 0%,
+    #343a40 29%,
+    #adb5bd 67%,
+    #212529 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+  display: inline-block;
+      font-size: 32px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }

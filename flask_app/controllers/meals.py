@@ -18,7 +18,7 @@ def show_all_meals():
 def add_meall_to_user():
     if request.method=="GET":
         if 'user_id' not in session:
-            return redirect("/")
+            return redirect("/sign_in")
         else:
             return render_template("add_meal.html")
     else:

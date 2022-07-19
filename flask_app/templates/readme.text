@@ -1,0 +1,1 @@
+  <img src="{{this_meal.image}}" alt=""> //this code for show image in show page besides show the recipe and origin and name of meal

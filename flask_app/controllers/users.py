@@ -28,7 +28,7 @@ def log_in():
         return render_template("sign_in.html")
     else:
         if user.User.login(request.form):
-            return redirect('/')
+            return redirect('/show_all_meals')
         #otherwise
         return render_template("sign_in.html")
 

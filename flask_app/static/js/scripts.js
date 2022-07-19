@@ -21,3 +21,6 @@ function makeShadow(element){
 function removeShadow(element){
     element.classList.remove("shadow")
 }
+function changStarColor(element){
+    element.classList.toggle("toggle")
+}

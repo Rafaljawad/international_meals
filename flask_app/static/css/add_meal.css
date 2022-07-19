@@ -9,16 +9,25 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 10px;
    
 }
+/* hr{
+    margin:2px 0 10px 0;
+} */
 header div{
     display: flex;
     gap:40px;
 }
-.user-name{
+/* .user-name{
     font-size: 18px;
     color: rgb(59, 58, 58);
     font-weight: 500;
+} */
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .bttn{
     width:150px;
@@ -30,6 +39,7 @@ header div{
     height:100vh;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 .img-container {
     width:60%;

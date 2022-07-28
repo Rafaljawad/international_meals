@@ -38,8 +38,8 @@ class User:
             user_id=connectToMySQL(cls.DB).query_db(query,data)
             # print("&&&&&&&&",user_id)
             session['user_id']=user_id
-            # session['first_name']=data['first_name']
-            # session['last_name']=data['last_name']
+            session['first_name']=data['first_name']
+            session['last_name']=data['last_name']
             return user_id
             #after creating new user now its ti,e to go to controller.
 

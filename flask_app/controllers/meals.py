@@ -23,7 +23,7 @@ def add_meall_to_user():
             return render_template("add_meal.html")
     else:
         if('image' not in request.files or request.files['image'].filename==""):
-            flash("please ensert an image")
+            flash("please Insert an image")
             return redirect("/add/meal")
         image=request.files['image']
         filename=secure_filename(image.filename)

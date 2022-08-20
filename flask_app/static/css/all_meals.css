@@ -121,3 +121,78 @@ footer{
 .toggle{
     fill:#F9B73B;
 }
+
+
+/*********styling animation button: add meal button style********************************* */
+
+.add-meal-btn:link, .add-meal-btn:visited{
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 15px 40px ;
+    border-radius: 100px;
+    transition: all 0.3s;
+    position: relative;
+    
+    /* color:#777; */
+    }
+    .add-meal-btn:hover{
+        /* we chose transform translate y because we want to move the btn up */
+        transform: translateY(-3px);
+        /* box-shadow: x offset value  y offset value  blur value   color */
+        box-shadow: 0 10px 20px rgba(0,0,0,.2);
+    }
+    .add-meal-btn:active{
+        transform: translateY(1px);
+        box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    }
+    .btn-warning.add-meal-btn{
+        background-color: #F9B73B;
+        color: rgb(58, 58, 58);
+        text-decoration: none;
+        border-radius: 100px;
+        position: relative;
+        animation-fill-mode: backwards;
+        
+    }
+    .btn-warning.add-meal-btn:hover{
+        color: rgb(58, 58, 58);
+    }
+    
+    .add-meal-btn::after{
+        content:"";
+        display: inline-block;
+        height:100%;
+        width:100%;
+        border-radius: 100px;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: -1;
+        transition: all 0.8s;
+      
+    
+    }
+    .add-meal-btn::after{
+        background-color: #F9B73B;
+        
+    }
+    .add-meal-btn:hover::after{
+        /* scale increase the element */
+        transform: scalex(1.5) scaleY(1.6);
+        opacity: 0;
+    }
+    @keyframes moveInbottom{
+        /* start point */
+        0%{ 
+            opacity:0;
+            /* translate x becuase we want to shift text fron left to right and left mean negative value */
+            transform: translateY(30px);
+        }
+        
+        /* endpoint */
+        100%{
+            opacity:1;
+            /* translate 0 means back to origin */
+            transform: translate(0px);
+        }
+    }
